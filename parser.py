@@ -31,7 +31,7 @@ def get_content(html):
         })
 
     for items in container:
-        if not any(i in items["name"] for i in not_need_items):
+        if not any(i in items["name"] for i in not_needed_items):
             for key, value in items.items():
                 print(key + " -> " + value)
             print("---------------------------------------------" * 3)
