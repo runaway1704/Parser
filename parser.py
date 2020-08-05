@@ -1,10 +1,12 @@
 from bs4 import BeautifulSoup
 import requests
 import time
-lowest_price = "1500"
-highest_price = "2000"
-# lowest_price = str(input("low price: "))
-# highest_price = str(input("max price: "))
+import os
+
+# lowest_price = "1500"
+# highest_price = "2000"
+lowest_price = str(input("low price: "))
+highest_price = str(input("max price: "))
 url = f"https://market.csgo.com/?s=pop&r=&q=&rs={lowest_price};{highest_price}&h="
 headers = {
     'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
@@ -41,6 +43,7 @@ def get_content(html):
 
 def parse():
     html = get_html(url)
+    os.system('cls||clear')
     get_content(html.text)
 
 
