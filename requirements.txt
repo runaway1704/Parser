@@ -5,7 +5,7 @@ idna==2.10
 modeltranslation==0.25
 py-notifier==0.1.0
 pypiwin32==223
-pywin32==228
+pywin32==301
 requests==2.24.0
 soupsieve==2.0.1
 urllib3==1.25.9
